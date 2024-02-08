@@ -1,25 +1,6 @@
-# Car Price Estimator: Project Overview
+This project showcases the development of a tool designed to predict car prices with a Mean Absolute Error (MAE) of approximately ₦1.8 million, aimed at assisting both buyers and sellers in understanding fair market values. It involved collecting over 2,000 car listings from [cars45](https://www.cars45.com/) and [autochek.africa](https://autochek.africa/ng/cars-for-sale) using Python and Playwright for web scraping. The data underwent thorough cleaning and preparation, including the removal of extraneous characters, standardization of text data, and outlier elimination. Exploratory Data Analysis (EDA) was conducted to identify trends and factors influencing car prices in the target region. 
 
-  - Created a tool that estimates car prices (MAE ~ ₦ 1.8M) to help sellers and buyers know what to pay for and sell.
-  - Scraped over 2,000 car descriptions from [cars45](https://www.cars45.com/) and [autochek.africa](https://autochek.africa/ng/cars-for-sale) using Python and Playwright.
-  - Performed exploratory data analysis to gather insights on car prices, trends, and popularity in the region.
-  - Optimized Ridge, Decision Tree, and Random Forest Regressors using GridsearchCV to reach the best model.
-  - Created external [Tableau dashboard](https://public.tableau.com/views/CarPriceDeterminantDashboard/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link) for visualization.
-  - Built a client facing web application using Flask.
-
-
- ## Data Cleaning
-Because the data was scraped from multiple sources, extensive data cleaning and preparation was required, which includes the following:
-
- - Removed brackets and commas from all features that used them.
- - Price numeric data was parsed.
- - Colors were standardized, and multiple colors were renamed to be one.
- - Brand and Model were parsed, formatted, and standardized to be the same across all sources.
- - Several outliers were removed, and engine capacity was standardized at milliliters. e.t.c
-  
-## EDA 
-
-For the Exploratory Analysis, various factors and trends affecting car prices in the region were investigated, as well as questions such as the popularity of brands and models. 
+To predict prices accurately, machine learning models such as Ridge, Decision Tree, and Random Forest Regressors were fine-tuned using GridsearchCV. The project also features a Tableau dashboard for interactive data visualization and a Flask-based web application for end-users to get price estimates. The Random Forest model demonstrated superior performance compared to the other models, achieving the lowest MAE on test and validation datasets. This initiative not only provides a practical solution for pricing cars but also encapsulates the entire data science workflow from data acquisition to model deployment. 
 
 
 <div style='display:flex;'>
@@ -27,7 +8,7 @@ For the Exploratory Analysis, various factors and trends affecting car prices in
 <img src="https://user-images.githubusercontent.com/57121852/213570571-0afc261a-d7d1-4184-92fe-4366a37aa98c.png" >
 </div>
 
-### Tableau Dashboard
+### Dashboard
 <img src="https://user-images.githubusercontent.com/57121852/213936600-c760ea7f-321c-4254-a88d-1ecc208e90e5.png" >
 
 ##  Model Building
